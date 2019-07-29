@@ -44,5 +44,5 @@ Datasets to use when testing in Postman
     name: 'Kampala',
     females: 50,
     males: 40,
-    parent_Id: 3
+    parent_location: 3
  } `
