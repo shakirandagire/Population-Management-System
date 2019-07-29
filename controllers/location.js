@@ -17,7 +17,7 @@ exports.create = (req, res) => {
 
     location.save()
     .then(data => {
-        res.send(data);
+        res.status(200).send(data);
     }).catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while creating the location."
@@ -62,9 +62,9 @@ exports.findOne = (req, res) => {
           if (location.length === 1) {
             var female = location[0].females;
             var male = location[0].males;
-            var Residents = female + male;
+            var residents = female + male;
       
-            return res.status(200).send({ location, female, male, Residents });
+            return res.status(200).send({ location, female, male, residents });
           }
         if(!location) {
             return res.status(404).send({
